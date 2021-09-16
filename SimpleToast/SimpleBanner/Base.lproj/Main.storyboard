@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleBanner" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NKb-00-Cbl">
+                                <rect key="frame" x="30" y="431" width="354" height="44"/>
+                                <color key="backgroundColor" red="0.90588235289999997" green="0.28627450980000002" blue="0.41176470590000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="hQ0-f7-LBb"/>
+                                </constraints>
+                                <state key="normal" title="Show Toast">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="showToast:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LCF-8Y-5tJ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Hello, world!" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dow-DY-3br">
+                                <rect key="frame" x="30" y="368" width="354" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" title="From Background" translatesAutoresizingMaskIntoConstraints="NO" id="ghr-Mf-Hbc">
+                                <rect key="frame" x="182.5" y="298" width="51" height="31"/>
+                                <color key="onTintColor" red="0.035294117649999998" green="0.035294117649999998" blue="0.090196078430000007" alpha="1" colorSpace="calibratedRGB"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animated" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lle-zM-LHr">
+                                <rect key="frame" x="170.5" y="269" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dow-DY-3br" firstAttribute="trailing" secondItem="NKb-00-Cbl" secondAttribute="trailing" id="1ee-l6-090"/>
+                            <constraint firstItem="NKb-00-Cbl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5eN-di-vUz"/>
+                            <constraint firstItem="Dow-DY-3br" firstAttribute="leading" secondItem="NKb-00-Cbl" secondAttribute="leading" id="7KA-wh-pqn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NKb-00-Cbl" secondAttribute="trailing" constant="30" id="Gl7-WG-aLv"/>
+                            <constraint firstItem="ghr-Mf-Hbc" firstAttribute="centerX" secondItem="Dow-DY-3br" secondAttribute="centerX" id="Ibi-Xy-dr3"/>
+                            <constraint firstItem="NKb-00-Cbl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="Nym-eh-dIg"/>
+                            <constraint firstItem="NKb-00-Cbl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="a8B-1Q-rk5"/>
+                            <constraint firstItem="NKb-00-Cbl" firstAttribute="top" secondItem="Dow-DY-3br" secondAttribute="bottom" constant="29" id="dcW-rU-y0C"/>
+                            <constraint firstItem="ghr-Mf-Hbc" firstAttribute="top" secondItem="Lle-zM-LHr" secondAttribute="bottom" constant="8" symbolic="YES" id="fR0-Mi-nbG"/>
+                            <constraint firstItem="Lle-zM-LHr" firstAttribute="centerX" secondItem="ghr-Mf-Hbc" secondAttribute="centerX" id="qHJ-Vc-sjh"/>
+                            <constraint firstItem="Dow-DY-3br" firstAttribute="top" secondItem="ghr-Mf-Hbc" secondAttribute="bottom" constant="39" id="wHT-I3-auz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="animated" destination="ghr-Mf-Hbc" id="Wd1-v4-N8a"/>
+                        <outlet property="textField" destination="Dow-DY-3br" id="X2W-cG-JN0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
